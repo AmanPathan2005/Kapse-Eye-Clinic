@@ -1,10 +1,10 @@
 var mysql = require("mysql");
 var util = require("util");
 var conn = mysql.createConnection({
-    "host":"localhost",
-    "user":"root",
-    "password":"",
-    "database":"hospital_project"
+    "host":"bqhi9apuxaovmnku3s9i-mysql.services.clever-cloud.com",
+    "user":"uzn4gfr519yqntgd",
+    "password":"uzn4gfr519yqntgd",
+    "database":"bqhi9apuxaovmnku3s9i"
 });
 
 var exe = util.promisify(conn.query).bind(conn);
