@@ -1,0 +1,73 @@
+<%-include("navbar.ejs")%>
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <h3 class="text-center mb-4">Add Gallery Image And Information</h3>
+        <div class="tab-content mt-3">
+            <!-- Mobile Number -->
+            <div >
+                <form action="/admin/update_gallery" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label">Gallery Image</label>
+                        <div class="input-group">
+                            <input type="file" class="form-control" name="Gallery_image1" placeholder="select image" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Gallery Name</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                            <input type="text" class="form-control" name="Gallery_info1" placeholder="Gallery Name" required>
+                        </div>
+                    </div>
+                 
+
+                    <div class="mb-3">
+                        <label class="form-label">Gallery Info</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                            <input type="text" class="form-control" name="Gallery_info3" placeholder="Gallery Info" required>
+                        </div>
+                    </div>
+                    
+           
+                    <button type="submit" class="btn btn-primary w-100">Add Gallery</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <table class="table table-bordered">
+            <tr>
+                <th>Action</th>
+                <th>Sr.No.</th>
+                <th>Gallery image</th>
+                <th>Gallery Name</th>
+                <th>Gallery Information</th>
+                
+                
+            </tr>
+
+            <tr>
+                <td>
+                    <!-- <a href=""><button class="btn btn-primary text-light"><i class="fa-solid fa-pen-to-square"></i></button></a> -->
+                    <!-- <a href=""><button class="btn btn-danger text-light"><i class="fa-solid fa-trash"></i></button></a> -->
+                  </td>
+              
+                <td>
+                    <img src="" alt="" height="50px">
+                </td>
+                
+            </tr>
+
+
+
+
+            </table>
+
+            </div>
+
+
+<%-include("footer.ejs")%>
+

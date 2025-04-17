@@ -1,0 +1,288 @@
+<%-include("header.ejs")%>
+
+<div id="hospitalSlider" class="carousel slide carousel-fade overflow-hidden" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#hospitalSlider" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#hospitalSlider" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#hospitalSlider" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+        <!-- Slide 1 -->
+         <% hs.map((row,i)=>{ %>
+        
+        <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+            <img src="/uploads/<%-row.slider_image1 %>" class="d-block w-100" alt="Doctors Team">
+            <div class="carousel-caption  bg-opacity-75 p-3 rounded">
+                <h5 class="fw-bold"><%-row.slider_text1 %></h5>
+                <p><%-row.slider_text2 %></p>
+            </div>
+        </div>
+        <% }) %>
+
+    </div>
+
+    <!-- Navigation Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#hospitalSlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hospitalSlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- Services Section -->
+<div class="container my-5 overflow-hidden">
+    <div class="row align-items-center">
+        <div class="col-lg-6 col-md-12 mb-4" data-aos="flip-left" >
+            <img src="user_assets/images/Image1.jpg" class="img-fluid rounded shadow" alt="Eye Treatment">
+        </div>
+        <div class="col-lg-6 col-md-12" data-aos="fade-up">
+            <h3 class="text-primary" data-aos="fade-left">If there is an eye problem, treatment will be guaranteed</h3>
+            <hr>
+            <ul class="list-unstyled" data-aos="fade-up">
+                <li data-aos="fade-right">🔹 Eye examination and treatment</li>
+                <li data-aos="fade-right">🔹 Cold phaco and laser center</li>
+                <li data-aos="fade-right">🔹 Cataract surgery</li>
+                <li data-aos="fade-right">🔹 Glaucoma surgery</li>
+                <li data-aos="fade-right">🔹 Contact lenses</li>
+                <li data-aos="fade-right">🔹 Treatment of baldness</li>
+                <li data-aos="fade-right">🔹 Eye plastic surgery</li>
+            </ul>
+            <a class="btn btn-success" href="/Pages/Apointment.html" data-aos="fade-up">Book an Appointment</a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- About Doctor Section -->
+<div class="container my-5 overflow-hidden">
+    <div class="row align-items-center">
+        <div class="col-lg-6 col-md-12" data-aos="fade-left" data-aos-duration="1200">
+            <h3 class="text-primary">About the Doctor</h3>
+            <hr>
+            <p data-aos="fade-up">🔹 Kapase Eye Clinic is an eye hospital located in Ahmednagar.</p>
+            <p data-aos="fade-up">🔹 The clinic is led by Dr. Pramod Kapase, an ophthalmologist.</p>
+            <p data-aos="fade-up">🔹 Dr. Pramod Kapse provides excellent customer service and top-notch eye care.</p>
+        </div>
+        <div class="col-lg-6 col-md-12 text-center" data-aos="zoom-in-up" data-aos-duration="1500">
+            <img src="user_assets/images/doct.webp" class="img-fluid rounded shadow" alt="Doctor">
+        </div>
+    </div>
+</div>
+
+<!-- department section  -->
+<div class="container my-5 fade-in">
+    <h2 class="text-center fw-bold mb-4"data-aos="fade-right" style="color: darkblue;">DEPARTMENTS</h2>
+    <div class="row g-4"data-aos="flip-left">
+        <% dept.map((row,i)=>{%>
+
+        <div class="col-md-4" data-aos="flip-right">
+            <div class="card">
+                <!-- <img src="/assets/images/Laparoscopic Surgery.webp" class="card-img-top" alt="Neurology"> -->
+                <div class="card-body">
+                    <h5 class="card-title fw-bold"><%-row.dept_name%></h5>
+                    <p class="card-text"><%-row.dept_desc%></p>
+                    <!-- <a href="#" class="read-more" style="color: tomato;">read more</a> -->
+                </div>
+            </div>
+        </div>
+
+        <%})%>
+    </div>
+</div>
+
+<!-- Why Choose Us -->
+<section class="container text-center my-5">
+    <h2 class="text-primary">Why Choose Our Hospital?</h2>
+    <p>We provide world-class healthcare with the best facilities and expert doctors.</p>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow p-4">
+                <i class="bi bi-heart-pulse text-danger display-4"></i>
+                <h4 class="mt-3">Expert Doctors</h4>
+                <p>hospital has highly experienced and specialized doctors.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow p-4">
+                <i class="bi bi-hospital text-success display-4"></i>
+                <h4 class="mt-3">Modern Facilities</h4>
+                <p>State-of-the-art equipment and the latest medical technology.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow p-4">
+                <i class="bi bi-telephone-inbound text-primary display-4"></i>
+                <h4 class="mt-3">24/7 Emergency</h4>
+                <p>We offer 24/7 emergency services with quick response time.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <pationt Revive></pationt> -->
+
+
+<section class="py-5">
+    <h2 class="text-primary text-center">What Our Patients Say</h2>
+
+    <div class="container">
+
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="testimonial-card text-center">
+                                <p class="mb-4">"The doctors and staff were amazing. I received excellent care and support throughout my treatment."</p>
+                                <h5>- John Doe</h5>
+                                <small>Visited for general checkup</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="testimonial-card text-center">
+                                <p class="mb-4">"I highly recommend this clinic. The service was outstanding and my health has improved significantly."</p>
+                                <h5>- Vishal</h5>
+                                <small>Underwent physical therapy</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="testimonial-card text-center">
+                                <p class="mb-4">"A wonderful experience! The team was professional, friendly, and truly cared about my well-being."</p>
+                                <h5>- Ashok</h5>
+                                <small>Recovered from surgery</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="testimonial-card text-center">
+                                <p class="mb-4">"The care and attention I received were second to none. Highly recommended!"</p>
+                                <h5>-  Shubham</h5>
+                                <small>Visited for dental care</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="testimonial-card text-center">
+                                <p class="mb-4">"From start to finish, the experience was amazing. I felt truly cared for."</p>
+                                <h5>- David</h5>
+                                <small>Received cardiology treatment</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+ <!-- <explore Section -->
+
+<div class="container my-5">
+<h2 class="text-center mb-4" data-aos="fade-up" style="color: blue;">Explore Our Blogs</h2>
+<div class="row">
+    
+ <% hb.map((row,i)=>{ %>
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card blog-card shadow-sm">
+            <img src="uploads/<%-row.blog_image %>" class="card-img-top" alt="Blog Image">
+            <div class="card-body">
+                <h5 class="card-title">  Latest Healthcare Trends</h5>
+                <p class="card-text"> <%-row.blog_info %></p>
+                <a href="/Pages/Blogs.html" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </div>
+    <% }) %>
+
+    <!-- <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card blog-card shadow-sm">
+            <img src="https://www.trinityeyehospital.com/blogs/images/digital-eye-strain.webp" class="card-img-top" alt="Blog Image">
+            <div class="card-body">
+                <h5 class="card-title">Tips for a Healthy Lifestyle</h5>
+                <p class="card-text">Learn how to maintain a balanced and healthy life.</p>
+                <a href="/Pages/Blogs.html" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card blog-card shadow-sm">
+            <img src="https://www.trinityeyehospital.com/blogs/images/digital-eye-strain.webp" class="card-img-top" alt="Blog Image">
+            <div class="card-body">
+                <h5 class="card-title">Tips for a Healthy Lifestyle</h5>
+                <p class="card-text">Learn how to maintain a balanced and healthy life.</p>
+                <a href="/Pages/Blogs.html" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </div> -->
+
+  
+</div>
+</div>
+
+
+<!-- News Portal  -->
+
+    <!-- Featured News -->
+    <!-- <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Featured News">
+                    <div class="card-body">
+                        <h5 class="card-title">Featured News Headline</h5>
+                        <p class="card-text">This is a brief description of the featured news article.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#">Breaking News 1</a></li>
+                    <li class="list-group-item"><a href="#">Breaking News 2</a></li>
+                    <li class="list-group-item"><a href="#">Breaking News 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+     -->
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<div id="Footer-placeholder"></div>
+</body>
+</html>
+<%-include("Footer.ejs")%>

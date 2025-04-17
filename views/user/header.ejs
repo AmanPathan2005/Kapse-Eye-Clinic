@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="user_assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Navbar Animations */
+        .navbar {
+            background: linear-gradient(135deg, #ffffff, #ffffff);
+            transition: all 0.5s ease-in-out;
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: fadeIn 1s forwards;
+            color: darkblue;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 50%;
+        }
+        .navbar-brand img:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .nav-link {
+            position: relative;
+            color: black;
+            transition: color 0.3s ease-in-out;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            left: 0;
+            bottom: -5px;
+            background: darkblue;
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link:hover {
+            color: darkblue;
+        }
+
+        /* Social Icon Animation */
+        .social-icons a {
+            transition: transform 0.3s ease-in-out;
+            display: inline-block;
+            animation: bounce 1s infinite alternate;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Button Animation */
+        .hospital-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #007bff;
+            color: darkblue;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .hospital-btn:hover {
+            transform: scale(1.1) rotate(-3deg);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav_1 p-3" style="background-color:rgb(133, 217, 241);">
+    <div class="contact-info ms-5">
+        <i class="fa-solid fa-location-dot"></i></i> <span>Kapse Eye Clinic, Court Lane, Ahmednagar - 414001</span>
+        <i class="fa-solid fa-envelope ms-5"></i> <span><%-tn.email%></span>
+        <i class="fa-solid fa-phone ms-5"></i> <span><%-tn.mobile%></span>
+    </div>
+    <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook text-white me-3"></i></a>
+        <a href="<"><i class="fa-brands fa-instagram text-white me-3"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter text-white me-3"></i></a>
+        <a href="https://www.youtube.com/@docsachinv"><i class="fa-brands fa-youtube text-white me-5"></i></a>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar- shadow-lg text-Dark fw-bold ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="user_assets/images/logo.png.jpg" alt="Logo"> 
+            <img src="http://poonahospital.org/wp-content/uploads/2022/10/ISO.png" alt="Logo"> 
+            <img src="http://poonahospital.org/wp-content/uploads/2022/10/NABH.png" alt="Logo"> 
+        </a>
+       
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-Dark fw-bold" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-Dark fw-bold" href="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link text-Dark fw-bold" href="/Services">Services</a></li>
+                <li class="nav-item"><a class="nav-link text-Dark fw-bold" href="/Our_doctor">Our doctor</a></li>
+                <li class="nav-item"><a class="nav-link text-Dark fw-bold" href="/gallary">Gallary</a></li>
+                <li class="nav-item"><a class="nav-link text-Dark fw-bold" href="/Contact">Contact</a></li>
+                <!-- <li class="nav-item"><a class="nav-link text-Dark fw-bold" href="/Patient">Patient Testimonials</a></li> -->
+                <li class="nav-item"><a class="nav-link text-Dark fw-bold" href="/FAQ">FAQs</a></li>
+            </ul>
+            <a href="Apointment" class="hospital-btn ms-4">
+                <i class="fas fa-hospital"></i>
+                <span>Book Appointment</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

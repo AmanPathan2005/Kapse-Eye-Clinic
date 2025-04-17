@@ -1,0 +1,89 @@
+<%-include("header.ejs")%>
+
+<section id="team">
+    <div class="container text-center">
+        <h2>Meet Our Team</h2>
+        <div class="row">
+            <% Dr.map((row,i)=>{ %>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/uploads/<%-row.slider_image1 %>" class="card-img-top" alt="Doctor 1" data-bs-toggle="modal" data-bs-target="#doctor1Modal">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Kapse</h5>
+                        <p class="card-text">Owner and Founder</p>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbviNmVH6sSUkUhLYpNgu5bmQaGp4qZWcpB2FnGcTBmxkZ1vTrTR5T0rmkUZuXqAOb-Xw&usqp=CAU" class="card-img-top" alt="Doctor 2" data-bs-toggle="modal" data-bs-target="#doctor2Modal">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Kapse</h5>
+                        <p class="card-text">Head of Surgery</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbviNmVH6sSUkUhLYpNgu5bmQaGp4qZWcpB2FnGcTBmxkZ1vTrTR5T0rmkUZuXqAOb-Xw&usqp=CAU" class="card-img-top" alt="Doctor 3" data-bs-toggle="modal" data-bs-target="#doctor3Modal">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Kapse</h5>
+                        <p class="card-text">Director of Pediatrics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 1 for Dr. Kapse - Owner and Founder -->
+       
+        <div class="modal fade" id="doctor1Modal" tabindex="-1" aria-labelledby="doctor1ModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="doctor1ModalLabel">Dr. Kapse - Owner and Founder</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Dr. Kapse is the owner and founder of our esteemed institution. With over 20 years of experience in the medical field, Dr. Kapse is dedicated to providing top-tier healthcare and services to all patients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- Modal 2 for Dr. Kapse - Head of Surgery -->
+        <div class="modal fade" id="doctor2Modal" tabindex="-1" aria-labelledby="doctor2ModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="doctor2ModalLabel">Dr. Kapse - Head of Surgery</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Dr. Kapse leads our surgical team with unmatched expertise. With a vast array of successful surgeries under his belt, he is renowned for his precision and care.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 3 for Dr. Kapse - Director of Pediatrics -->
+        <div class="modal fade" id="doctor3Modal" tabindex="-1" aria-labelledby="doctor3ModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="doctor3ModalLabel">Dr. Kapse - Director of Pediatrics</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>As the Director of Pediatrics, Dr. Kapse provides exceptional care for children and families. His compassionate approach has helped countless young patients lead healthier lives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap JS and Popper.js -->
+
+<%-include("Footer.ejs")%>

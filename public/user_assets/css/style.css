@@ -1,0 +1,418 @@
+.nav_1 {
+    background-color:rgb(52, 141, 179);
+    color: black;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nav_1 .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.nav_1 .contact-info i {
+    font-size: 18px;
+}
+.nav_1 .social-icons {
+    display: flex;
+    gap: 5px;
+}
+.nav_1 .social-icons a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+@media (max-width: 1000px) {
+    .nav_1 {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        background-color: darkblue;
+        display: none;
+    }
+    .nav_1 .contact-info {
+        flex-direction: column;
+        background-color: darkblue;
+    }
+
+
+}
+ .carousel-caption {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* /* <index section>  */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* About doctor section  */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+#team {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+#team h2 {
+    color: #003366;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.card img {
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card-body {
+    padding: 25px;
+    text-align: center;
+}
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0056b3;
+}
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+.row {
+    margin-top: 40px;
+}
+
+ /* why chose us  section?? */
+ body {
+    background-color: #f8f9fa;
+}
+.card {
+    border: none;
+    transition: transform 0.5s ease-in-out;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Explore blogs */
+.blog-card {
+    transition: transform 0.3s ease-in-out;
+}
+.blog-card:hover {
+    transform: scale(1.05);
+}
+
+/* Contact  */
+
+        .contact-section {
+            padding: 40px 0;
+            background-color: #f4f7fc;
+            border-radius: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #007BFF;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+            flex-shrink: 0;
+        }
+
+        .contact-text h5 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .contact-text p {
+            margin: 5px 0 0;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 575.98px) {
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .icon-box {
+                margin-bottom: 15px;
+            }
+        }
+
+/* Navbar Button  */
+        .hospital-btn {
+            position: relative;
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 15px;
+            color: black;
+            background-color:rgb(216, 213, 213);
+            border: none;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .hospital-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #28a745, #218838);
+            transform: translateX(-100%);
+            transition: transform 0.5s;
+            z-index: 0;
+        }
+
+        .hospital-btn:hover::before {
+            transform: translateX(0);
+        }
+
+        .hospital-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .hospital-btn i {
+            margin-right: 10px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+
+        .hospital-btn span {
+            position: relative;
+            z-index: 1;
+        }
+   
+   
+/* Appointment Page  */
+
+body {
+    /* background: linear-gradient(to right, #d6e5e2, #edf0ee); */
+    font-family: 'Arial', sans-serif;
+}
+.appointment-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.appointment-form:hover {
+    transform: scale(1.02);
+}
+.btn-primary {
+    background: #007bff;
+    border: none;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+
+
+.carousel-caption h5 {
+    animation-delay: 0.5s;
+}
+.carousel-caption p {
+    animation-delay: 1s;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+
+/* Responsive height */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+}
+    
+
+/* <BLog section> */
+
+body {
+    font-family: Arial, sans-serif;
+}
+.hero {
+    height: 40vh;
+    background-color:rgb(109, 208, 247);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   color: darkblue;
+    text-align: center;
+    position: relative;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    /* background: rgba(0, 0, 0, 0.6); */
+}
+.hero h1, .hero p {
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.blog-card:hover {
+    transform: translateY(-10px);
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Patient Testimonials  */
+
+.testimonial-card {
+    /* background-color:; */
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* <service> */
+/* Custom CSS for animations and styles */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card h5 {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.card:hover p {
+    color: #007bff;
+}
+
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-header {
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-body {
+    padding: 30px;
+}

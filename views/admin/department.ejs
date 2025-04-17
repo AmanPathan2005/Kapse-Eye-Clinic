@@ -1,0 +1,60 @@
+<%-include("navbar.ejs")%>
+
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <h3 class="text-center mb-4">Edit Doctors Information</h3>
+        <div class="tab-content mt-3">
+            <!-- Mobile Number -->
+            <div >
+                <form action="/admin/save_department" method="post" >
+                    <div class="mb-3">
+                        <label class="form-label">Edit Doctors Name</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                            <input type="text" class="form-control" name="dept_name"  required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Edit Doctors Expireance in</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                            <input type="text" class="form-control" name="dept_desc" required>
+                        </div>
+                    </div>
+           
+                    <button type="submit" class="btn btn-primary w-100">Edit Doctors</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <table class="table table-bordered">
+            <tr>
+                <th>Action</th>
+                <th>Sr.No.</th>
+                <th>Name</th>
+                <th>Description</th>
+                
+            </tr>
+            <%departments.map((row,i)=>{ %>
+                
+                <tr>
+                    <td>
+                      <a href="/admin/edit_department/<%-row.dept_id%>"><button class="btn btn-primary text-light"><i class="fa-solid fa-pen-to-square"></i></button></a>
+                      <a href="/admin/delete_department/<%-row.dept_id%>"><button class="btn btn-danger text-light"><i class="fa-solid fa-trash"></i></button></a>
+                    </td>
+                    <td><%-i+1%></td>                   
+                    <td><%-row.dept_name%></td> 
+                    <td><%-row.dept_desc%></td>
+                </tr>
+
+            <% }) %>
+    </table>
+</div>
+
+<%-include("footer.ejs")%>

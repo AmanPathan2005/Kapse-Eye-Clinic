@@ -1,0 +1,69 @@
+<%-include("navbar.ejs")%>
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <h3 class="text-center mb-4">Add contact</h3>
+        <div class="tab-content mt-3">
+
+            <div >
+                <form action="/admin/save_contact" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label">Enter contact Information</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="contact_info" placeholder="contact Information" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Enter contact email</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="contact_info" placeholder="contact Email" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Enter contact Phone</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="contact_info" placeholder="contact Information" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Add Contact</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <table class="table table-bordered">
+            <tr>
+                <th>Action</th>
+                <th>Sr.No.</th>
+                <th>contact Information</th>
+                <th>contact email</th>
+                <th>contact Phone</th>
+                
+                
+            </tr>
+
+            <tr>
+                <td>
+                    <a href=""><button class="btn btn-primary text-light"><i class="fa-solid fa-pen-to-square"></i></button></a>
+                    <a href=""><button class="btn btn-danger text-light"><i class="fa-solid fa-trash"></i></button></a>
+                  </td>
+                <td></td>
+                <td>
+                    <img src="" alt="" height="50px">
+                </td>
+                <td></td>
+            </tr>
+
+
+
+
+            </table>
+
+            </div>
+
+
+
+<%-include("footer.ejs")%>
